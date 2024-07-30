@@ -36,6 +36,7 @@
               <h5 class="mt-2 mb-2">Kelas Pemrograman Dasar</h5>
               <p>Instructor : Mr. John Doe</p>
             </div>
+            <!-- KELAS PEMROGRAMAN DASAR -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
@@ -56,35 +57,42 @@
               >
                 <div class="accordion-body">
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >1. Dasar Pemrogaman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(0)"
+                      rel="noopener noreferrer"
+                    >
+                      1. Dasar Pemrogaman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
+                    <i class="bi bi-check-circle-fill text-danger" id="1"></i>
                   </div>
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >2. Sejarah Pemrograman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(1)"
+                      rel="noopener noreferrer"
+                    >
+                      2. Sejarah Pemrograman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
+                    <i class="bi bi-check-circle-fill text-danger" id="2"></i>
                   </div>
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >3. Pentingnya Belajar Dasar Pemrogaman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(2)"
+                      rel="noopener noreferrer"
+                    >
+                      3. Roadmap Pemrogaman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
-                  </div>
-                  <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >4. Roadmap Belajar
-                    </a>
-                    &nbsp;
+                    <i class="bi bi-check-circle-fill text-danger" id="3"></i>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- KELAS HTML DASAR -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
@@ -104,15 +112,43 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
-                    Materi kali ini akan membahas dassar pemrograman. Materi
-                    kali ini akan membahas dassar pemrograman.
-                  </p>
-                  <button type="button" class="btn btn-outline-primary">
-                    Lihat Materi
-                  </button>
+                  <div class="m-1">
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(3)"
+                      rel="noopener noreferrer"
+                    >
+                      1. Pendahuluan Html
+                    </button>
+                    &nbsp;
+                    <i class="bi bi-check-circle-fill text-danger" id="4"></i>
+                  </div>
+                  <div class="m-1">
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(4)"
+                      rel="noopener noreferrer"
+                    >
+                      2. Hello World
+                    </button>
+                    &nbsp;
+                    <i class="bi bi-check-circle-fill text-danger" id="5"></i>
+                  </div>
+                  <div class="m-1">
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(5)"
+                      rel="noopener noreferrer"
+                    >
+                      3. Tag HTML
+                    </button>
+                    &nbsp;
+                    <i class="bi bi-check-circle-fill text-danger" id="6"></i>
+                  </div>
                 </div>
               </div>
+
+              <!-- KELAS CSS DASAR -->
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
@@ -132,13 +168,39 @@
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <p>
-                      Materi kali ini akan membahas dassar pemrograman. Materi
-                      kali ini akan membahas dassar pemrograman.
-                    </p>
-                    <button type="button" class="btn btn-outline-primary">
-                      Lihat Materi
-                    </button>
+                    <div class="m-1">
+                      <button
+                        class="btn btn-link"
+                        onclick="changeVideo(6)"
+                        rel="noopener noreferrer"
+                      >
+                        1. Pendahuluan CSS
+                      </button>
+                      &nbsp;
+                      <i class="bi bi-check-circle-fill text-danger" id="7"></i>
+                    </div>
+                    <div class="m-1">
+                      <button
+                        class="btn btn-link"
+                        onclick="changeVideo(7)"
+                        rel="noopener noreferrer"
+                      >
+                        2. Penempatan CSS
+                      </button>
+                      &nbsp;
+                      <i class="bi bi-check-circle-fill text-danger" id="8"></i>
+                    </div>
+                    <div class="m-1">
+                      <button
+                        class="btn btn-link"
+                        onclick="changeVideo(8)"
+                        rel="noopener noreferrer"
+                      >
+                        3. Font Styling
+                      </button>
+                      &nbsp;
+                      <i class="bi bi-check-circle-fill text-danger" id="9"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,15 +209,17 @@
         </div>
         <div class="col-8">
           <div class="section-video text-center">
+            <div id="description-container"></div>
             <!-- <video width="720" height="480" controls class="m-video">
               <source src="/assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video> -->
 
             <iframe
+              id="videoFrame"
               width="720"
               height="480"
-              src="https://www.youtube.com/embed/jGyYuQf-GeE?si=VYPWGtZPz1kNeh7G"
+              src="https://www.youtube.com/embed/bRNlrdfKNd4?si=5uQ4GV96gT3QogS-"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -164,15 +228,38 @@
             ></iframe>
 
             <h3>Materi</h3>
-            <p class="p-4">
-              Pemrograman dasar adalah tahap awal dalam pembelajaran pemrograman
-              komputer. Ini melibatkan pengenalan konsep-konsep dasar yang
-              diperlukan untuk mulai menulis dan memahami kode. Berikut adalah
-              beberapa aspek kunci dari pemrograman dasar:
+            <p class="p-4" id="materi">
+              Pada kesempatan kali ini, Saya John doe akan mengajarkan materi
+              Kelas Pemrograman dasar. Diharapkan, kita semua mendapat manfaat
+              dari sesi kelas tersebut
             </p>
-            <button type="button" class="btn btn-outline-primary mb-4">
+            <p id="id_session"></p>
+
+            <!-- <div id="buttonContainer"></div> -->
+            <button
+              type="button"
+              class="btn btn-outline-primary mb-4"
+              id="button-clear"
+              onclick="doneSession(1)"
+            >
               Tandai selesai
             </button>
+            <!-- <button
+              type="button"
+              class="btn btn-outline-primary mb-4"
+              id="button-clear"
+              onclick="doneSession(2)"
+            >
+              Tandai selesai
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary mb-4"
+              id="button-clear"
+              onclick="doneSession(3)"
+            >
+              Tandai selesai
+            </button> -->
           </div>
         </div>
       </div>
@@ -184,5 +271,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="dummy.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -28,7 +28,7 @@ let courses = [
   },
 ];
 
-let course_session = [
+export let course_session = [
   {
     id: 1,
     id_course: 1,

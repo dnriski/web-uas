@@ -56,31 +56,37 @@
               >
                 <div class="accordion-body">
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >1. Dasar Pemrogaman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(0)"
+                      rel="noopener noreferrer"
+                    >
+                      1. Dasar Pemrogaman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
+                    <i class="bi bi-check-circle-fill text-danger" id="1"></i>
                   </div>
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >2. Sejarah Pemrograman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(1)"
+                      rel="noopener noreferrer"
+                    >
+                      2. Sejarah Pemrograman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
+                    <i class="bi bi-check-circle-fill text-danger" id="2"></i>
                   </div>
                   <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >3. Pentingnya Belajar Dasar Pemrogaman
-                    </a>
+                    <button
+                      class="btn btn-link"
+                      onclick="changeVideo(2)"
+                      rel="noopener noreferrer"
+                    >
+                      3. Roadmap Pemrogaman
+                    </button>
                     &nbsp;
-                    <i class="bi bi-check-circle-fill text-danger"></i>
-                  </div>
-                  <div class="m-1">
-                    <a href="http://" rel="noopener noreferrer"
-                      >4. Roadmap Belajar
-                    </a>
-                    &nbsp;
+                    <i class="bi bi-check-circle-fill text-danger" id="3"></i>
                   </div>
                 </div>
               </div>
@@ -147,12 +153,14 @@
         </div>
         <div class="col-8">
           <div class="section-video text-center">
+            <div id="description-container"></div>
             <!-- <video width="720" height="480" controls class="m-video">
               <source src="/assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video> -->
 
             <iframe
+              id="videoFrame"
               width="720"
               height="480"
               src="https://www.youtube.com/embed/jGyYuQf-GeE?si=VYPWGtZPz1kNeh7G"
@@ -164,7 +172,7 @@
             ></iframe>
 
             <h3>Materi</h3>
-            <p class="p-4">
+            <p class="p-4" id="materi">
               Pemrograman dasar adalah tahap awal dalam pembelajaran pemrograman
               komputer. Ini melibatkan pengenalan konsep-konsep dasar yang
               diperlukan untuk mulai menulis dan memahami kode. Berikut adalah
@@ -184,5 +192,66 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="dummy.js"></script>
+    <script>
+      let session_class = [
+        {
+          id: 1,
+          id_session: 1,
+          title: "1. Dasar Pemrograman",
+          link_video:
+            "https://www.youtube.com/embed/jGyYuQf-GeE?si=ojRu13bqsvg-Bjnd",
+          description:
+            "Pemrograman dasar adalah tahap awal dalam pembelajaran pemrograman komputer. Ini melibatkan pengenalan konsep-konsep dasar yang diperlukan untuk mulai menulis dan memahami kode. Berikut adalah beberapa aspek kunci dari pemrograman dasar:",
+          is_success: true,
+        },
+        {
+          id: 2,
+          id_session: 1,
+          title: "2. Sejarah Pemrograman",
+          link_video:
+            "https://www.youtube.com/embed/ZDuwL9qGtuI?si=X1pgMHPgoypbyred",
+          description:
+            "Mengenal sejarah pemrograman seperti algoritma, logika pemrograman, dan prinsip dasar pemrograman. Kursus ini membantu Anda memahami fondasi yang diperlukan sebelum mempelajari bahasa pemrograman spesifik.",
+          is_success: true,
+        },
+        {
+          id: 3,
+          id_session: 1,
+          title: "3. Roadmap Belajar Pemrograman",
+          link_video:
+            "https://www.youtube.com/embed/OEhw6GqQDts?si=CwoqHev6bQp947HD",
+          description:
+            "Mempelajari roadmap belajar pemrograman yang efektif. Kursus ini memberikan panduan tentang bagaimana memulai belajar pemrograman, memilih bahasa pemrograman, dan langkah-langkah yang harus diambil untuk menjadi seorang pemrogram.",
+          is_success: false,
+        },
+      ];
+
+      const videoLinks = ["", "", ""];
+
+      function changeVideo(index) {
+        document.getElementById("videoFrame").src =
+          session_class[index].link_video;
+        document.getElementById("materi").innerText =
+          session_class[index].description;
+      }
+      function updateDisplay() {
+        session_class.forEach((item) => {
+          const element = document.getElementById(item.id);
+          if (element) {
+            if (element.id == item.id && item.is_success) {
+              console.log(element);
+              element.classList.remove("hidden");
+            } else {
+              element.classList.add("hidden");
+              console.log(element);
+            }
+          }
+        });
+      }
+
+      // Panggil fungsi untuk memperbarui tampilan elemen saat halaman dimuat
+      updateDisplay();
+    </script>
   </body>
 </html>

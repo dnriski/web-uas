@@ -35,3 +35,7 @@
   border-radius: 10px;
   padding-top: 10px;
 }
+
+.hidden {
+  display: none; /* Mulai dengan menyembunyikan elemen */
+}

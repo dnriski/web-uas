@@ -1,3 +1,36 @@
-.section-one {
-  width: 35% !important;
+.bg-color {
+  background-color: #02539c;
+}
+
+.w-middle {
+  height: 50px;
+}
+
+.accordion {
+  border: 2px solid;
+  border-color: #02539c !important;
+  border-radius: 10px;
+}
+
+.accordion-header {
+  background-color: #02539c;
+  color: white;
+  padding: 2px;
+}
+
+.accordion-button {
+  color: #02539c !important;
+  font-weight: 700;
+}
+
+.m-video {
+  margin-top: -20px;
+  border: 2 px solid;
+  border-color: black !important;
+}
+
+.section-video {
+  border: 2px solid;
+  border-color: #02539c !important;
+  border-radius: 10px;
 }

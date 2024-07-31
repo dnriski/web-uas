@@ -28,6 +28,10 @@
   border: 2 px solid;
   border-color: black !important;
 }
+.border {
+  border: 2px solid;
+  border-color: white !important;
+}
 
 .section-video {
   border: 2px solid;

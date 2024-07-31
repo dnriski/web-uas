@@ -1,3 +1,8 @@
+/* * {
+  border: 2px solid;
+  border-colo: black;
+} */
+
 .bg-color {
   background-color: #02539c;
 }
@@ -37,7 +42,7 @@
   border: 2px solid;
   border-color: #02539c !important;
   border-radius: 10px;
-  padding-top: 10px;
+  padding-top: 2px;
 }
 
 .hidden {

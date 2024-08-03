@@ -5,7 +5,7 @@ let session_class = [
     link_video: "https://www.youtube.com/embed/jGyYuQf-GeE?si=ojRu13bqsvg-Bjnd",
     description:
       "Pemrograman dasar adalah tahap awal dalam pembelajaran pemrograman komputer. Ini melibatkan pengenalan konsep-konsep dasar yang diperlukan untuk mulai menulis dan memahami kode. Berikut adalah beberapa aspek kunci dari pemrograman dasar:",
-    is_success: true,
+    is_success: false,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ let session_class = [
     link_video: "https://www.youtube.com/embed/ZDuwL9qGtuI?si=X1pgMHPgoypbyred",
     description:
       "Mengenal sejarah pemrograman seperti algoritma, logika pemrograman, dan prinsip dasar pemrograman. Kursus ini membantu Anda memahami fondasi yang diperlukan sebelum mempelajari bahasa pemrograman spesifik.",
-    is_success: true,
+    is_success: false,
   },
   {
     id: 3,
